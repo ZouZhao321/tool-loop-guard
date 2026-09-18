@@ -1,0 +1,22 @@
+{
+  "name": "tool-loop-guard",
+  "version": "1.0.0",
+  "description": "Pi extension: 滑动窗口 + KMP 最小周期检测，防止工具调用循环",
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "format": "prettier --write src/",
+    "format:check": "prettier --check src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "latest",
+    "@types/node": "^26.4.0",
+    "prettier": "^3.4.0",
+    "typescript": "^5.7.0"
+  }
+}
