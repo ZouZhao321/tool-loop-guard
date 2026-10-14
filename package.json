@@ -1,7 +1,7 @@
 {
   "name": "tool-loop-guard",
   "version": "1.0.0",
-  "description": "Pi extension: 滑动窗口 + KMP 最小周期检测，防止工具调用循环",
+  "description": "Pi extension: sliding-window and KMP minimal-period detection that prevents tool-call loops.",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -22,6 +22,9 @@
   "engines": {
     "node": ">=22"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "files": [
     "src",
     "README.md",
@@ -41,7 +44,8 @@
     "lint:fix": "eslint src --fix",
     "typecheck": "tsc --noEmit",
     "test": "node scripts/smoke.mjs",
-    "check:pack": "node scripts/check-pack.mjs"
+    "check:pack": "node scripts/check-pack.mjs",
+    "prepublishOnly": "npm run typecheck && npm run lint && npm test && npm run format:check && npm run check:pack"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"
