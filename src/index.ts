@@ -28,7 +28,7 @@ const WHITELIST = new Set(["ask_user_question", "todo"]);
 
 // ─── 签名生成 ─────────────────────────────────────────────────────────
 
-function makeSignature(toolName: string, input: Record<string, unknown>): string {
+export function makeSignature(toolName: string, input: Record<string, unknown>): string {
   switch (toolName) {
     case "bash":
       return `bash:${String((input as { command?: string }).command ?? "").trim()}`;
@@ -59,7 +59,7 @@ function makeSignature(toolName: string, input: Record<string, unknown>): string
  *
  * 如果无周期返回 { period: n, hasCycle: false }。
  */
-function minimumPeriod(seq: string[]): { period: number; hasCycle: boolean } {
+export function minimumPeriod(seq: string[]): { period: number; hasCycle: boolean } {
   const n = seq.length;
   if (n <= 1) return { period: n, hasCycle: false };
 
