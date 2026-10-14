@@ -65,13 +65,13 @@ npm pack --dry-run   # 查看发布文件清单
 
 没有配置文件、环境变量或命令行开关，行为由 `src/index.ts` 顶部的常量决定：
 
-| 常量 | 取值 | 含义 |
-| --- | --- | --- |
-| `W` | `8` | 阻止阈值使用的窗口大小 |
-| `TIME_WINDOW_MS` | `120000` | 超过 120s 的调用不参与检测 |
-| `BLOCK_THRESHOLD` | `Math.floor(W / 2)` = `4` | `p < BLOCK_THRESHOLD` 时阻止并结束本轮 |
-| `COMPACT_THRESHOLD` | `3` | 触发上下文压缩的连续阻止次数 |
-| `WHITELIST` | `ask_user_question`、`todo` | 永不阻止的工具 |
+| 常量                | 取值                        | 含义                                   |
+| ------------------- | --------------------------- | -------------------------------------- |
+| `W`                 | `8`                         | 阻止阈值使用的窗口大小                 |
+| `TIME_WINDOW_MS`    | `120000`                    | 超过 120s 的调用不参与检测             |
+| `BLOCK_THRESHOLD`   | `Math.floor(W / 2)` = `4`   | `p < BLOCK_THRESHOLD` 时阻止并结束本轮 |
+| `COMPACT_THRESHOLD` | `3`                         | 触发上下文压缩的连续阻止次数           |
+| `WHITELIST`         | `ask_user_question`、`todo` | 永不阻止的工具                         |
 
 修改这些常量需要改动源码。
 

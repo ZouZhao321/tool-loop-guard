@@ -41,13 +41,13 @@ The extension opens no network connection, runs no external process and writes n
 
 There is no configuration file, no environment variable and no command-line flag. The behaviour is fixed by constants at the top of `src/index.ts`:
 
-| Constant | Value | Meaning |
-| --- | --- | --- |
-| `W` | `8` | window size used for the block thresholds |
-| `TIME_WINDOW_MS` | `120000` | calls older than 120 s do not take part in detection |
-| `BLOCK_THRESHOLD` | `Math.floor(W / 2)` = `4` | `p < BLOCK_THRESHOLD` blocks and terminates the turn |
-| `COMPACT_THRESHOLD` | `3` | consecutive blocks before the context is compacted |
-| `WHITELIST` | `ask_user_question`, `todo` | tools that are never blocked |
+| Constant            | Value                       | Meaning                                              |
+| ------------------- | --------------------------- | ---------------------------------------------------- |
+| `W`                 | `8`                         | window size used for the block thresholds            |
+| `TIME_WINDOW_MS`    | `120000`                    | calls older than 120 s do not take part in detection |
+| `BLOCK_THRESHOLD`   | `Math.floor(W / 2)` = `4`   | `p < BLOCK_THRESHOLD` blocks and terminates the turn |
+| `COMPACT_THRESHOLD` | `3`                         | consecutive blocks before the context is compacted   |
+| `WHITELIST`         | `ask_user_question`, `todo` | tools that are never blocked                         |
 
 Changing them means editing the source.
 
