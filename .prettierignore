@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+*.js
+dist/
+coverage/
+
+# 上游逐字文档，保持原始格式
+CODE_OF_CONDUCT.md
+
+# 临时目录
+tmp/
+temp/
