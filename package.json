@@ -35,8 +35,8 @@
     ]
   },
   "scripts": {
-    "format": "prettier --write src/",
-    "format:check": "prettier --check src/",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "typecheck": "tsc --noEmit",
