@@ -37,7 +37,8 @@
   "scripts": {
     "format": "prettier --write src/",
     "format:check": "prettier --check src/",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/smoke.mjs"
   },
   "peerDependencies": {
     "@earendil-works/pi-coding-agent": "*"
