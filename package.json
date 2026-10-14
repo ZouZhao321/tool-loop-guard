@@ -3,6 +3,32 @@
   "version": "1.0.0",
   "description": "Pi extension: 滑动窗口 + KMP 最小周期检测，防止工具调用循环",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZouZhao321/tool-loop-guard.git"
+  },
+  "homepage": "https://github.com/ZouZhao321/tool-loop-guard#readme",
+  "bugs": {
+    "url": "https://github.com/ZouZhao321/tool-loop-guard/issues"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "agent",
+    "loop-detection"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "README.zh.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "pi": {
     "extensions": [
       "./src/index.ts"
@@ -13,8 +39,11 @@
     "format:check": "prettier --check src/",
     "typecheck": "tsc --noEmit"
   },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
   "devDependencies": {
-    "@earendil-works/pi-coding-agent": "latest",
+    "@earendil-works/pi-coding-agent": "^0.84.2",
     "@types/node": "^26.4.0",
     "prettier": "^3.4.0",
     "typescript": "^5.7.0"
