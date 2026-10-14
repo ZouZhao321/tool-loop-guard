@@ -1,6 +1,6 @@
 {
   "name": "tool-loop-guard",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Pi extension: sliding-window and KMP minimal-period detection that prevents tool-call loops.",
   "type": "module",
   "license": "MIT",
