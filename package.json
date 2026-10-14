@@ -37,6 +37,8 @@
   "scripts": {
     "format": "prettier --write src/",
     "format:check": "prettier --check src/",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "typecheck": "tsc --noEmit",
     "test": "node scripts/smoke.mjs"
   },
@@ -46,6 +48,9 @@
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "^0.84.2",
     "@types/node": "^26.4.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
     "prettier": "^3.4.0",
     "typescript": "^5.7.0"
   }
