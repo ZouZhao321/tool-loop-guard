@@ -34,13 +34,19 @@
 
 ### 安装
 
+首选从 npm 安装已发布的包：
+
+```bash
+pi install npm:tool-loop-guard
+```
+
+也可以直接从 git 仓库安装：
+
 ```bash
 pi install git:github.com/ZouZhao321/tool-loop-guard
 ```
 
-### 运行
-
-本地开发时直接安装工作副本：
+本地开发时直接安装检出目录：
 
 ```bash
 pi install ./tool-loop-guard

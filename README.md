@@ -6,11 +6,19 @@ A pi extension that watches tool calls with a time-bounded sliding window and KM
 
 ## Install
 
+Install the published package from npm:
+
+```bash
+pi install npm:tool-loop-guard
+```
+
+Or install straight from the git repository:
+
 ```bash
 pi install git:github.com/ZouZhao321/tool-loop-guard
 ```
 
-For local development, install the working copy instead:
+For local development, install the checkout directory itself:
 
 ```bash
 pi install ./tool-loop-guard
